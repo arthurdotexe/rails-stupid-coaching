@@ -1,0 +1,32 @@
+<br>
+<div class='container'>
+  <h1>Stupid Coaching</h1>
+  <br>
+  <h3>Question:</h3>
+  <blockquote class="blockquote" style="border-left: .25rem solid #a34e78;">
+    <div class='container'>
+      <p>
+        <% if @question.blank? %>
+          No question asked!
+        <% else %>
+          <%= @question %>
+        <% end %>
+      </p>
+      <cite class='blockquote-footer'>You</cite>
+    </div>
+  </blockquote>
+
+  <br>
+
+  <h3>Answer:</h3>
+  <blockquote class="blockquote" style="border-left: .25rem solid #a34e78;">
+    <div class='container'>
+      <p><%= @answer %></p>
+      <cite class='blockquote-footer'>Your coach</cite>
+    </div>
+  </blockquote>
+
+  <br>
+
+  <%= link_to "Ask another question", ask_path %>
+</div>
